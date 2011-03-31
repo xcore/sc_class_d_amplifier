@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Network xmlns="http://www.xmos.com"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.xmos.com http://www.xmos.com">
+  <Type>Board</Type>
+
+  <Declarations>
+    <Declaration>core stdcore[1]</Declaration>
+  </Declarations>
+
+  <Nodes>
+    <Node Id="0" Type="XS1-L1A-TQ128">
+      <Core Number="0" Reference="stdcore[0]">
+      </Core>
+    </Node>
+  </Nodes>
+
+  <Packages>
+    <Package id="0" Type="XS1-L1A-LQ64">
+      <Component NodeId="0" InPackage="0"/>
+    </Package>
+  </Packages>
+
+  <ExternalDevices>
+    <Device NodeId="0" Core="0" Class="SPIFlash" Name="bootFlash" Type="AT25DF041A">
+      <Attribute Name="PORT_SPI_MISO" Value="XS1_PORT_1A"/>
+      <Attribute Name="PORT_SPI_SS"   Value="XS1_PORT_1B"/>
+      <Attribute Name="PORT_SPI_CLK"  Value="XS1_PORT_1C"/>
+      <Attribute Name="PORT_SPI_MOSI" Value="XS1_PORT_1D"/>
+    </Device>
+  </ExternalDevices>
+
+  <JTAGChain>
+    <JTAGDevice NodeId="0"/>
+  </JTAGChain>
+</Network>

@@ -1,0 +1,9 @@
+Stereo class D power amplifier module
+
+This code was developed to run on the iPod dock, but provides an example of how
+to implement a class D PA.
+
+Audio samples are accepted at 48.0, 44.1 or 32.0 kHz.
+These samples are interpolated up to a frequency at 8 times the original sample rate.
+The interpolated samples are output for left and right channels to drive the classD 
+output stage via PWM.
