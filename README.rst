@@ -13,7 +13,7 @@ Class D Amplifier
 Key Features
 ============
 
-* <Bullet pointed list of features>
+* <Bullet Add something sensible here. pointed list of features>
 
 To Do
 =====
